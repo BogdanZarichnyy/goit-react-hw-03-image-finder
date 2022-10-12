@@ -1,0 +1,31 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+    max-width: calc(100vw - 220px);
+    max-height: calc(100vh - 220px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 8px greenyellow,
+                -4px 4px 8px greenyellow,
+                4px -4px 8px greenyellow,
+                -4px -4px 8px greenyellow;
+    border-radius: 10px;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    max-height: calc(100vh - 220px);
+    border-radius: inherit;
+}
