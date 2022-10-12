@@ -38,8 +38,7 @@ export class App extends Component {
         pixabayAPI.per_page = 40;
 
         try {
-            const response = await pixabayAPI.getContentByInputData();
-            const { hits, totalHits } = response.data;
+            const { hits, totalHits } = await pixabayAPI.getContentByInputData();
 
             if (hits.length === 0) {
                 return;
@@ -77,9 +76,7 @@ export class App extends Component {
                 pixabayAPI.per_page = this.state.itemsResidual;
             }
 
-            const response = await pixabayAPI.getContentByInputData();
-
-            const { hits } = response.data;
+            const { hits } = await pixabayAPI.getContentByInputData();
 
             if (hits.length === 0) {
                 return;
